@@ -54,5 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/Test/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/Test/Spelling.pm
+%{_mandir}/man3/Test::Spelling.3pm*
