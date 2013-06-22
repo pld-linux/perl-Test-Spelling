@@ -8,19 +8,24 @@
 Summary:	Test::Spelling - check for spelling errors in POD files
 Summary(pl.UTF-8):	Test::Spelling - sprawdzanie plików POD pod kątem błędów pisowni
 Name:		perl-Test-Spelling
-Version:	0.15
+Version:	0.19
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f2713ff45abf1862e1edd45f72cf7ea1
+# Source0-md5:	32ac3fcbd8f4f80a8b035c15feaab353
 URL:		http://search.cpan.org/dist/Test-Spelling/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-IPC-Run3 >= 0.044
 BuildRequires:	perl-Pod-Spell >= 1.01
+BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-Test-Tester
 %endif
+Requires:	perl-IPC-Run3 >= 0.044
+Requires:	perl-Pod-Spell >= 1.01
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
