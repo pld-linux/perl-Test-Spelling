@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Test
 %define	pnam	Spelling
 Summary:	Test::Spelling - check for spelling errors in POD files
